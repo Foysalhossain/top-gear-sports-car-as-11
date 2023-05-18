@@ -1,8 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/logo/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 
 const NavBar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
     return (
         <div className='container mx-auto py-5'>
             <div className="navbar  h-24 mb-4 p-3">
@@ -73,7 +84,7 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                {/* <div className="navbar-end">
+                <div className="navbar-end">
                     {
                         user ?
                             <>
@@ -84,7 +95,7 @@ const NavBar = () => {
                                 </div>
                             </> : <Link className='btn ml-3' to='/login'>Login</Link>
                     }
-                </div> */}
+                </div>
 
             </div>
         </div>

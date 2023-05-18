@@ -1,11 +1,46 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/signup/1.png'
+import { AuthContext } from '../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
+import { useContext } from 'react';
 
 const SignUp = () => {
 
+    const { createUser } = useContext(AuthContext);
+
+    // const [error, setError] = useState("");
+
     const handleSignUp = event => {
         event.preventDefault();
+
+        const form = event.target;
+        const name = form.name.value;
+        const photo = form.photo.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, photo, email, password);
+
+        if ((name, photo, email, password)) {
+            createUser(email, password)
+                .then(result => {
+                    const user = result.user;
+                    updatedUser(result.user, name, photo)
+                    console.log(user);
+                })
+                .catch(error => console.log(error));
+        }
     }
+
+    const updatedUser = (user, userName, url) => {
+        updateProfile(user, {
+            displayName: userName, photoURL: url
+        }).then(() => {
+
+        }).catch((error) => {
+
+        });
+    }
+
 
     return (
         <div className="hero min-h-screen bg-base-200">

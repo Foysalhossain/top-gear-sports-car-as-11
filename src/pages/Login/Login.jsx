@@ -1,10 +1,40 @@
 import { Link } from 'react-router-dom';
 import img from '../../assets/login/2.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
 
+    const { signIn, handleGoogle } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+
+    const googleSignIn = () => {
+        console.log('click');
+        handleGoogle(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
+
     const handleLogin = event => {
         event.preventDefault();
+
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.log(error));
     }
 
     return (
@@ -38,6 +68,9 @@ const Login = () => {
                             </div>
                         </form>
                         <p className='my-4 text-center'>New to Top Gear <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
+                        <div className='mt-5 text-center'>
+                            <button onClick={googleSignIn} className="btn btn-active btn-accent mb-3"> Login with Google</button>
+                        </div>
                     </div>
                 </div>
             </div>
