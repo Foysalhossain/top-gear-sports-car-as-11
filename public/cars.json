@@ -1,0 +1,112 @@
+[
+    {
+        "name": "Velocity Racer",
+        "picture": "https://i.ibb.co/k337F1s/9.png",
+        "quantity": 10,
+        "rating": 4.5,
+        "price": 120,
+        "seller_name": "Speedy Toys",
+        "seller_email": "speedytoys@example.com",
+        "status": "racing",
+        "description": "The Velocity Racer is a sleek and speedy toy sports car designed for racing enthusiasts. With its aerodynamic design and powerful engine, it zooms through tracks with lightning-fast speed, leaving a trail of excitement behind."
+    },
+    {
+        "name": "Turbo Charger",
+        "picture": "https://i.ibb.co/cQ77s6J/8.png",
+        "quantity": 8,
+        "rating": 4.2,
+        "price": 160,
+        "seller_name": "Superior Playthings",
+        "seller_email": "info@superiorplaythings.com",
+        "status": "racing",
+        "description": "Get ready for turbocharged action with the Turbo Charger toy sports car. Equipped with a high-performance engine and precision controls, this car dominates the racetrack. Its sleek design and vibrant colors make it a true standout."
+    },
+    {
+        "name": "Stunt Master",
+        "picture": "https://i.ibb.co/9NK1hSy/7.png",
+        "quantity": 5,
+        "rating": 4.8,
+        "price": 110,
+        "seller_name": "Adrenaline Toys",
+        "seller_email": "sales@adrenalinetoys.com",
+        "status": "stunt",
+        "description": "The Stunt Master toy sports car is built for jaw-dropping stunts and incredible maneuvers. It can perform impressive flips, spins, and jumps, defying gravity at every turn. Take it to the extreme and push your stunt skills to the limit!"
+    },
+    {
+        "name": "Off-Road Racer",
+        "picture": "https://i.ibb.co/X2QdLL6/4.png",
+        "quantity": 12,
+        "rating": 4.0,
+        "price": 170,
+        "seller_name": "Adventure Toys",
+        "seller_email": "contact@adventuretoys.co",
+        "status": "OffRoad",
+        "description": "Conquer rough terrains and tackle off-road adventures with the Off-Road Racer toy sports car. Its rugged build and all-terrain wheels ensure excellent performance on uneven surfaces. Prepare for thrilling off-road escapades like never before!"
+    },
+    {
+        "name": "Drift King",
+        "picture": "https://i.ibb.co/w0thqcr/10.png",
+        "quantity": 3,
+        "rating": 4.7,
+        "price": 140,
+        "seller_name": "Thrilling Toys",
+        "seller_email": "support@thrillingtoys.com",
+        "status": "OffRoad",
+        "description": "Experience the art of drifting with the Drift King toy sports car. Its specialized drift tires and adjustable drift wing allow for precision drifts and hairpin turns. Master the art of controlled slides and become the ultimate drift king!"
+    },
+    {
+        "name": "Monster Wheels",
+        "picture": "https://i.ibb.co/tcT7Kzx/1.png",
+        "quantity": 9,
+        "rating": 4.4,
+        "price": 190,
+        "seller_name": "Mega Fun",
+        "seller_email": "info@megafuntoys.com",
+        "status": "OffRoad",
+        "description": "Unleash the power of the Monster Wheels toy sports car and dominate the off-road terrain. With its oversized wheels and powerful suspension, it tackles any obstacle in its path. Brace yourself for an adrenaline-pumping off-road adventure!"
+    },
+    {
+        "name": "Extreme Racer",
+        "picture": "https://i.ibb.co/zsgNQV3/2.png",
+        "quantity": 6,
+        "rating": 4.6,
+        "price": 200,
+        "seller_name": "Excite Toys",
+        "seller_email": "sales@excitetoys.com",
+        "status": "stunt",
+        "description": "Feel the rush of adrenaline with the Extreme Racer toy sports car. Its sleek design and powerful engine deliver lightning-fast speeds on the racetrack. Race against friends or set new speed records - this car is built for extreme racing fun!"
+    },
+    {
+        "name": "Aero Sprinter",
+        "picture": "https://i.ibb.co/nQWZdLk/5.png",
+        "quantity": 14,
+        "rating": 4.3,
+        "price": 220,
+        "seller_name": "Swift Games",
+        "seller_email": "support@swiftgames.net",
+        "status": "racing",
+        "description": "The Aero Sprinter toy sports car combines speed and style in one sleek package. Its aerodynamic body and advanced features make it a top choice for racing enthusiasts. Take control of this high-performance car and leave your competitors in the dust!"
+    },
+    {
+        "name": "Jumping Jester",
+        "picture": "https://i.ibb.co/MCwbKZL/6.png",
+        "quantity": 7,
+        "rating": 4.9,
+        "price": 250,
+        "seller_name": "Energetic Toys",
+        "seller_email": "info@energetictoys.co",
+        "status": "stunt",
+        "description": "The Jumping Jester toy sports car is a gravity-defying stunt machine. Its unique jumping mechanism allows it to leap over obstacles and perform impressive aerial tricks. Prepare for non-stop action and let the Jumping Jester steal the show!"
+    },
+    {
+        "name": "Supercharged Sprint",
+        "picture": "https://i.ibb.co/86zyMFb/3.png",
+        "quantity": 11,
+        "rating": 4.1,
+        "price": 160,
+        "seller_name": "Powerful Play",
+        "seller_email": "contact@powerfulplay.com",
+        "status": "racing",
+        "description": "Experience the thrill of speed with the Supercharged Sprint toy sports car. Its powerful engine and sleek design make it a force to be reckoned with on the racetrack. Get ready to unleash its full potential and leave your competitors in awe!"
+    }
+]

@@ -31,12 +31,13 @@ const SignUp = () => {
         }
     }
 
-    const updatedUser = (user, userName, url) => {
+    // url
+    const updatedUser = (user, userName, photo) => {
         updateProfile(user, {
-            displayName: userName, photoURL: url
+            displayName: userName, photoURL: photo
         }).then(() => {
 
-        }).catch((error) => {
+        }).catch(() => {
 
         });
     }
