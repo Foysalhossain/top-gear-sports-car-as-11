@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import ToyTable from "./ToyTable";
 
 
 const MyToys = () => {
@@ -10,13 +11,39 @@ const MyToys = () => {
         fetch(`http://localhost:5000/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                setToys(data);
             })
     }, [user])
 
     return (
         <div>
-            <h2>My Toys</h2>
+            <h2>My Toys: {toys.length}</h2>
+            <div className="overflow-x-auto w-full">
+                <table className="table w-full">
+                    {/* head */}
+                    <thead>
+                        <tr>
+                            <th>
+                                <label>
+                                    <input type="checkbox" className="checkbox" />
+                                </label>
+                            </th>
+                            <th>Name</th>
+                            <th>Job</th>
+                            <th>Favorite Color</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            toys.map(toy => <ToyTable
+                                key={toy._id}
+                                toy={toy}
+                            ></ToyTable>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

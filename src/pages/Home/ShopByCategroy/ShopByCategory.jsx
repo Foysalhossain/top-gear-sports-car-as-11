@@ -7,7 +7,7 @@ const ShopByCategory = () => {
     const [activeTab, setActiveTab] = useState('racing');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/allToys/${activeTab}`)
+        fetch(`http://localhost:5000/tabToys/${activeTab}`)
             .then(res => res.json())
             .then(result => {
                 setCategories(result)
