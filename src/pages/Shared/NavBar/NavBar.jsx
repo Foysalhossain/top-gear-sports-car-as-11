@@ -41,14 +41,27 @@ const NavBar = () => {
                                     All Toys
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink
-                                    to='/myToys'
-                                    className={({ isActive }) => isActive ? "text-orange-600 " : ""}
-                                >
-                                    My Toys
-                                </NavLink>
-                            </li>
+                            {
+                                user ?
+                                    <>
+                                        <li>
+                                            <NavLink
+                                                to='/myToys'
+                                                className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                                            >
+                                                My Toys
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink
+                                                to='/addToy'
+                                                className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                                            >
+                                                Add a Toy
+                                            </NavLink>
+                                        </li>
+                                    </> : ''
+                            }
                             <li>
                                 <NavLink
                                     to='/blogs'
@@ -84,14 +97,27 @@ const NavBar = () => {
                                 All Toys
                             </NavLink>
                         </li>
-                        <li className='font-bold'>
-                            <NavLink
-                                to='/myToys'
-                                className={({ isActive }) => isActive ? "text-orange-600 " : ""}
-                            >
-                                My Toys
-                            </NavLink>
-                        </li>
+                        {
+                            user ?
+                                <>
+                                    <li className='font-bold'>
+                                        <NavLink
+                                            to='/myToys'
+                                            className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                                        >
+                                            My Toys
+                                        </NavLink>
+                                    </li>
+                                    <li className='font-bold'>
+                                        <NavLink
+                                            to='/addToy'
+                                            className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                                        >
+                                            Add a Toy
+                                        </NavLink>
+                                    </li>
+                                </> : ''
+                        }
                         <li className='font-bold'>
                             <NavLink
                                 to='/blogs'

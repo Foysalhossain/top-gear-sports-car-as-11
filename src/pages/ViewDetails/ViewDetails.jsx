@@ -13,8 +13,8 @@ const ViewDetails = () => {
                 <h2 className="card-title"><span>Toy Name:</span> {name}</h2>
                 <h2 className="card-title">Seller Name: {seller_name}</h2>
                 <p><span className="font-semibold">Seller Email:</span> {seller_email}</p>
-                <p><span className="font-semibold">Price:</span> {price}</p>
-                <p><span className="font-semibold">Quantity:</span> {quantity}</p>
+                <p><span className="font-semibold">Price:</span> ${price}</p>
+                <p><span className="font-semibold">Available Quantity:</span> {quantity}</p>
                 <p><span className="font-semibold">Ratings:</span> {rating}</p>
                 <p><span className="font-semibold">Description:</span> {description}</p>
             </div>
