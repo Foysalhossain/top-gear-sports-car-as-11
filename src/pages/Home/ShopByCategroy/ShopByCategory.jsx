@@ -35,7 +35,9 @@ const ShopByCategory = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {categories?.map(category => (<SubCategories key={categories.id} category={category}></SubCategories>))}
+                {
+                    categories?.map(category => (<SubCategories key={categories.id} category={category}></SubCategories>))
+                }
             </div>
 
 

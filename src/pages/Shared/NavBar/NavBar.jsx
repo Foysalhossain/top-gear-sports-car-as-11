@@ -13,6 +13,8 @@ const NavBar = () => {
             .then(() => { })
             .catch(error => console.log(error))
     }
+    // console.log(user);
+    // console.log(user?.photoURL);
 
     return (
         <div className='container mx-auto py-5'>
@@ -37,6 +39,14 @@ const NavBar = () => {
                                     className={({ isActive }) => isActive ? "text-orange-600 " : ""}
                                 >
                                     All Toys
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink
+                                    to='/myToys'
+                                    className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                                >
+                                    My Toys
                                 </NavLink>
                             </li>
                             <li>
@@ -76,6 +86,14 @@ const NavBar = () => {
                         </li>
                         <li className='font-bold'>
                             <NavLink
+                                to='/myToys'
+                                className={({ isActive }) => isActive ? "text-orange-600 " : ""}
+                            >
+                                My Toys
+                            </NavLink>
+                        </li>
+                        <li className='font-bold'>
+                            <NavLink
                                 to='/blogs'
                                 className={({ isActive }) => isActive ? "text-orange-600 " : ""}
                             >
@@ -89,7 +107,8 @@ const NavBar = () => {
                         user ?
                             <>
                                 <div className='w-2/5 rounded-full h-2/4 flex'>
-                                    <img className='rounded-full w-12 h-12 mx-auto' src={user.photoURL} alt="" />
+
+                                    <img referrerPolicy="no-referrer" className='rounded-full w-12 h-12 mx-auto' src={user.photoURL} alt="" />
                                     {user.name}
                                     <button onClick={handleLogOut} className="btn">Sign out</button>
                                 </div>
