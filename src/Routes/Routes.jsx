@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import AddToy from "../pages/AddToy/AddToy";
 import AllToys from "../pages/AllToys/AllToys";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import EditForm from "../pages/MyToys/EditForm";
 
 
 const router = createBrowserRouter([
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
                         <ViewDetails></ViewDetails>
                     </PrivateRoute>,
                 loader: ({ params }) => fetch(`https://top-gear-sports-car-server.vercel.app/details/${params.id}`)
+            },
+            {
+                path: 'editToy',
+                element: <EditForm></EditForm>
             }
         ]
     },

@@ -1,9 +1,8 @@
-import { useState } from "react";
-import UpdateModal from "./UpdateModal";
+import { Link } from "react-router-dom";
+
 
 const ToyTable = ({ toy, handleDelete }) => {
     const { _id, name, sellerName, sellerEmail, price, quantity } = toy;
-    const [modalShow, setModalShow] = useState(false);
 
 
     return (
@@ -28,9 +27,9 @@ const ToyTable = ({ toy, handleDelete }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <th>
-                    <button onClick={() => setModalShow(true)} className="btn btn-outline btn-secondary">Edit</button>
-
-                    <UpdateModal show={modalShow} onHide={() => setModalShow(false)} toy={toy} />
+                    <Link to='/editToy'>
+                        <button className="btn btn-outline btn-secondary">Edit</button>
+                    </Link>
                 </th>
             </tr>
         </tbody>
