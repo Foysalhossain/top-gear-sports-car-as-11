@@ -1,6 +1,6 @@
 
 const ToyTable = ({ toy }) => {
-    const { name, sellerEmail, price } = toy;
+    const { name, sellerName, sellerEmail, price, quantity } = toy;
     return (
         <tbody>
             {/* row 1 */}
@@ -14,8 +14,7 @@ const ToyTable = ({ toy }) => {
                 <td>
                     <div className="flex items-center space-x-3">
                         <div>
-                            <div className="font-bold">Hart Hagerty</div>
-                            <div className="text-sm opacity-50">United States</div>
+                            <div className="font-bold">{sellerName}</div>
                         </div>
                     </div>
                 </td>
@@ -23,9 +22,10 @@ const ToyTable = ({ toy }) => {
                     {name}
                 </td>
                 <td>{sellerEmail}</td>
-                <td>{price}</td>
+                <td>${price}</td>
+                <td>{quantity}</td>
                 <th>
-                    <button className="btn btn-ghost btn-xs">details</button>
+                    <button className="btn btn-outline btn-secondary">View Details</button>
                 </th>
             </tr>
         </tbody>
