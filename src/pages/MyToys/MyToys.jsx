@@ -8,12 +8,10 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`http://localhost:5000/myToys?email=${user?.email}`)
             .then(res => res.json())
-            .then(data => {
-                setToys(data);
-            })
-    }, [user])
+            .then(data => setToys(data))
+    }, [])
 
     return (
         <div>

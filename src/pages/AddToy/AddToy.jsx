@@ -1,8 +1,6 @@
-// import { useLoaderData } from "react-router-dom";
 
 
 const AddToy = () => {
-    // const details = useLoaderData();
     const handleAdd = (event) => {
         event.preventDefault();
         const form = event.target;

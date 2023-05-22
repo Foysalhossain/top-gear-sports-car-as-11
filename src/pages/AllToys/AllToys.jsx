@@ -6,10 +6,10 @@ const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
     console.log(allToys);
     useEffect(() => {
-        fetch('http://localhost:5000/addCategory/${user?.email}')
+        fetch('http://localhost:5000/addCategory')
             .then(res => res.json())
             .then(data => setAllToys(data))
-    }, [allToys])
+    }, [])
 
     return (
         <div className="bg-gray-100">

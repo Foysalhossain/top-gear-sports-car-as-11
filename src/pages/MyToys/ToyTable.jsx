@@ -1,5 +1,6 @@
 
-const ToyTable = () => {
+const ToyTable = ({ toy }) => {
+    const { name, sellerEmail, price } = toy;
     return (
         <div>
             {/* row 1 */}
@@ -23,11 +24,10 @@ const ToyTable = () => {
                     </div>
                 </td>
                 <td>
-                    Zemlak, Daniel and Leannon
-                    <br />
-                    <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
+                    {name}
                 </td>
-                <td>Purple</td>
+                <td>{sellerEmail}</td>
+                <td>{price}</td>
                 <th>
                     <button className="btn btn-ghost btn-xs">details</button>
                 </th>
