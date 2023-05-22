@@ -13,8 +13,7 @@ const NavBar = () => {
             .then(() => { })
             .catch(error => console.log(error))
     }
-    // console.log(user);
-    // console.log(user?.photoURL);
+
 
     return (
         <div className='container mx-auto py-5'>
@@ -134,8 +133,8 @@ const NavBar = () => {
                             <>
                                 <div className='w-2/5 rounded-full h-2/4 flex'>
 
-                                    <img referrerPolicy="no-referrer" className='rounded-full w-12 h-12 mx-auto' src={user.photoURL} alt="" />
-                                    {user.name}
+                                    <img referrerPolicy="no-referrer" title={user?.displayName} className=' rounded-full w-12 h-12 mx-auto' src={user.photoURL} alt="" />
+
                                     <button onClick={handleLogOut} className="btn">Sign out</button>
                                 </div>
                             </> : <Link className='btn ml-3' to='/login'>Login</Link>
