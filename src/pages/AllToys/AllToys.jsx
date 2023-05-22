@@ -18,7 +18,7 @@ const AllToys = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`https://top-gear-sports-car-server.vercel.app/addCategory/${user?.email}`)
+        fetch(`https://top-gear-sports-car-server.vercel.app/myToys/${user?.email}`)
             .then((result) => result.json())
             .then(data => {
                 setAllToys(data);

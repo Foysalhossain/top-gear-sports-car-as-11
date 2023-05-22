@@ -9,7 +9,7 @@ const OurBrands = () => {
     return (
         <div className='my-20'>
             <h2 className="text-3xl text-center font-bold">Our Brands</h2>
-            <div className='grid md:grid-cols-4 lg:grid-cols-6 my-8'>
+            <div className='grid mx-auto md:grid-cols-4 lg:grid-cols-6 my-8 justify-center'>
                 <img src={img1} alt="" />
                 <img src={img2} alt="" />
                 <img src={img3} alt="" />

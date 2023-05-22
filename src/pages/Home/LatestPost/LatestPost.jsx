@@ -9,7 +9,7 @@ const LatestPost = () => {
                 <h2 className="text-3xl font-bold">Latest Post</h2>
                 <p className='py-4'>20 Toy Car Play Ideas for Kids to Spark Creativity</p>
             </div>
-            <div className='grid grid-cols-3'>
+            <div className='grid lg:grid-cols-3 mx-auto'>
                 <div className="card rounded-none w-96 bg-base-100 shadow-xl">
                     <figure><img src={img1} alt="Shoes" /></figure>
                     <div className="card-body">

@@ -127,7 +127,7 @@ const NavBar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar lg:navbar-end">
                     {
                         user ?
                             <>

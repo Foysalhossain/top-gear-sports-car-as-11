@@ -10,10 +10,13 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`https://top-gear-sports-car-server.vercel.app/myToys?email=${user?.email}`)
-            .then(res => res.json())
-            .then(data => setToys(data))
-    }, [user])
+        if (user?.email) {
+            fetch(`https://top-gear-sports-car-server.vercel.app/myToys?email=${user?.email}`)
+                .then(res => res.json())
+                .then(data => setToys(data))
+        }
+
+    }, [user?.email])
 
 
     const handleDelete = id => {

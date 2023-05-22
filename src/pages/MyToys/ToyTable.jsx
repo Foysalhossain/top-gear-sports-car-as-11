@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const ToyTable = ({ toy, handleDelete }) => {
     const { _id, name, sellerName, sellerEmail, price, quantity } = toy;
+    // console.log(price);
 
 
     return (
@@ -27,7 +28,7 @@ const ToyTable = ({ toy, handleDelete }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <th>
-                    <Link to='/editToy'>
+                    <Link to={`/editToy/${_id}`}>
                         <button className="btn btn-outline btn-secondary">Edit</button>
                     </Link>
                 </th>

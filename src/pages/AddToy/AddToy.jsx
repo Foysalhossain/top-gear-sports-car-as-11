@@ -16,7 +16,7 @@ const AddToy = () => {
         let sellerEmail = user?.email;
         const category = form.category.value;
         const price = form.price.value;
-        const rating = form.picture.value;
+        const rating = form.rating.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
 
@@ -37,7 +37,7 @@ const AddToy = () => {
 
 
     return (
-        <div className="my-20">
+        <div className="my-36">
             <h2 className="text-center text-4xl mb-10">Add Toy</h2>
             <form onSubmit={handleAdd}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -101,7 +101,7 @@ const AddToy = () => {
                     </div>
                 </div>
                 <div className="form-control mt-6">
-                    <input className="btn btn-primary btn-block" type="submit" value="Add a Toy" />
+                    <input className="btn btn-primary btn-block" type="submit" value="Update Toy" />
                 </div>
             </form >
         </div >

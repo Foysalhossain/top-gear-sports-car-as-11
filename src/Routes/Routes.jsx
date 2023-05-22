@@ -62,8 +62,9 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://top-gear-sports-car-server.vercel.app/details/${params.id}`)
             },
             {
-                path: 'editToy',
-                element: <EditForm></EditForm>
+                path: 'editToy/:id',
+                element: <EditForm></EditForm>,
+                loader: ({ params }) => fetch(`https://top-gear-sports-car-server.vercel.app/addCategory/${params.id}`)
             }
         ]
     },
