@@ -1,6 +1,8 @@
+import usePath from "../../usePath";
 
 
 const Blogs = () => {
+    usePath('AddToy')
     return (
         <div>
             <h2 className="text-4xl text-center font-bold my-8">Blogs</h2>

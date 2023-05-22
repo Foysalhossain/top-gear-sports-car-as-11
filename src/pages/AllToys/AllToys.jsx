@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import AllToyRow from "./AllToyRow";
 import { AuthContext } from "../../providers/AuthProvider";
+import usePath from "../../usePath";
 
 
 const AllToys = () => {
+    usePath('AllToy')
     const { user } = useContext(AuthContext);
     const [allToys, setAllToys] = useState([]);
     const [searchText, setSearchText] = useState('');

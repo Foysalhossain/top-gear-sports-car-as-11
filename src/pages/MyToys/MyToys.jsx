@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import ToyTable from "./ToyTable";
+import usePath from "../../usePath";
 
 
 const MyToys = () => {
+    usePath('MyToys')
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
 

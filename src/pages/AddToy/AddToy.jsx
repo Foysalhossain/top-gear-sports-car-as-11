@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import usePath from "../../usePath";
 
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
+    usePath('AddToy')
 
     const handleAdd = (event) => {
         event.preventDefault();

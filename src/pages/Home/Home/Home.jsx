@@ -1,3 +1,4 @@
+import usePath from "../../../usePath";
 import Banner from "../Banner/Banner";
 import LatestPost from "../LatestPost/LatestPost";
 import OurBrands from "../OurBrands/OurBrands";
@@ -6,6 +7,7 @@ import ShopByCategory from "../ShopByCategroy/ShopByCategory";
 
 
 const Home = () => {
+    usePath('AddToy')
     return (
         <div>
             <Banner></Banner>
