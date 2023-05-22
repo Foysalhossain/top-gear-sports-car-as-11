@@ -29,17 +29,17 @@ const MyToys = () => {
                             <th>Name</th>
                             <th>Job</th>
                             <th>Favorite Color</th>
-                            <th></th>
+                            <th>Favorite Color</th>
+                            <th>Favorite Color</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {
-                            toys.map(toy => <ToyTable
-                                key={toy._id}
-                                toy={toy}
-                            ></ToyTable>)
-                        }
-                    </tbody>
+                    {
+                        toys.map(toy => <ToyTable
+                            key={toy._id}
+                            toy={toy}
+                        ></ToyTable>)
+                    }
+
                 </table>
             </div>
         </div>

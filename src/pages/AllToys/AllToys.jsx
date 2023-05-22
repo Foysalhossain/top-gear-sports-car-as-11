@@ -50,7 +50,7 @@ const AllToys = () => {
                             </tr>
                         </thead>
                         {
-                            allToys.map((toys) => <AllToyRow
+                            allToys?.map((toys) => <AllToyRow
                                 key={toys.key}
                                 toys={toys}
                             ></AllToyRow>)
