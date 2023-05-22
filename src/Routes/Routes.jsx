@@ -11,6 +11,7 @@ import AddToy from "../pages/AddToy/AddToy";
 import AllToys from "../pages/AllToys/AllToys";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
                     <PrivateRoute>
                         <ViewDetails></ViewDetails>
                     </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://top-gear-sports-car-server.vercel.app/details/${params.id}`)
             }
         ]
     },

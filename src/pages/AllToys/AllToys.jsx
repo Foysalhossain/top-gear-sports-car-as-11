@@ -10,13 +10,13 @@ const AllToys = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/addCategory')
+        fetch('https://top-gear-sports-car-server.vercel.app/addCategory')
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addCategory/${user?.email}`)
+        fetch(`https://top-gear-sports-car-server.vercel.app/addCategory/${user?.email}`)
             .then((result) => result.json())
             .then(data => {
                 setAllToys(data);
@@ -24,7 +24,7 @@ const AllToys = () => {
     }, [user])
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toySearchByTitle/${searchText}`)
+        fetch(`https://top-gear-sports-car-server.vercel.app/toySearchByTitle/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

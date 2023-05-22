@@ -7,7 +7,7 @@ const ShopByCategory = () => {
     const [activeTab, setActiveTab] = useState('racing');
 
     useEffect(() => {
-        fetch(`http://localhost:5000/tabToys/${activeTab}`)
+        fetch(`https://top-gear-sports-car-server.vercel.app/tabToys/${activeTab}`)
             .then(res => res.json())
             .then(result => {
                 setCategories(result)

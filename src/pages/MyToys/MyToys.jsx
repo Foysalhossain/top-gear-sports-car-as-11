@@ -8,7 +8,7 @@ const MyToys = () => {
     const [toys, setToys] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys?email=${user?.email}`)
+        fetch(`https://top-gear-sports-car-server.vercel.app/myToys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
     }, [user])
@@ -17,7 +17,7 @@ const MyToys = () => {
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://top-gear-sports-car-server.vercel.app/myToys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

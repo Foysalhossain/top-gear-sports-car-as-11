@@ -21,7 +21,7 @@ const AddToy = () => {
         const details = { picture, name, sellerName, sellerEmail, category, price, rating, quantity, description };
         console.log(details);
 
-        fetch('http://localhost:5000/addCategory', {
+        fetch('https://top-gear-sports-car-server.vercel.app/addCategory', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(details)

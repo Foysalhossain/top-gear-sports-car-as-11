@@ -12,7 +12,7 @@ const PhotoGallery = () => {
                 <h1 className=' text-3xl font-bold'>Buy Kids Ride On Cars</h1>
                 <p className='my-3'>Get 25% Off On First Order And Also Get Gift Voucher</p>
             </div>
-            <div className="grid md:grid-cols-3 lg:grid-cols-3 rounded-box">
+            <div data-aos="fade-up" className="grid md:grid-cols-3 lg:grid-cols-3 rounded-box">
                 <div className="carousel-item justify-center">
                     <img src={img1} alt="Drink" />
                 </div>
