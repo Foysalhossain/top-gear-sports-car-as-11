@@ -1,7 +1,9 @@
+import { useState } from "react";
+import UpdateModal from "./UpdateModal";
 
 const ToyTable = ({ toy, handleDelete }) => {
     const { _id, name, sellerName, sellerEmail, price, quantity } = toy;
-
+    const [modalShow, setModalShow] = useState(false);
 
 
     return (
@@ -26,10 +28,9 @@ const ToyTable = ({ toy, handleDelete }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <th>
-                    <button className="btn btn-outline btn-secondary">Edit</button>
-                </th>
-                <th>
-                    <button className="btn btn-outline btn-secondary">View Details</button>
+                    <button onClick={() => setModalShow(true)} className="btn btn-outline btn-secondary">Edit</button>
+
+                    <UpdateModal show={modalShow} onHide={() => setModalShow(false)} toy={toy} />
                 </th>
             </tr>
         </tbody>
