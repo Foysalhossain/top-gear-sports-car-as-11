@@ -11,7 +11,8 @@ const MyToys = () => {
         fetch(`http://localhost:5000/myToys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setToys(data))
-    }, [])
+    }, [user])
+
 
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete');
@@ -33,7 +34,12 @@ const MyToys = () => {
 
     return (
         <div>
-            <h2>My Toys: {toys.length}</h2>
+            <div className="text-center my-10">
+                <h2>My Toys: {toys.length}</h2>
+
+
+            </div>
+
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}
@@ -49,6 +55,7 @@ const MyToys = () => {
                             <th>SUB-CATEGORY</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Edit</th>
                             <th>View Details</th>
                         </tr>
                     </thead>

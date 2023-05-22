@@ -26,6 +26,9 @@ const ToyTable = ({ toy, handleDelete }) => {
                 <td>${price}</td>
                 <td>{quantity}</td>
                 <th>
+                    <button className="btn btn-outline btn-secondary">Edit</button>
+                </th>
+                <th>
                     <button className="btn btn-outline btn-secondary">View Details</button>
                 </th>
             </tr>
